@@ -1,6 +1,5 @@
 package com.hostmdy.recipe.controller;
 
-import java.lang.StackWalker.Option;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -20,8 +19,6 @@ import com.hostmdy.recipe.domain.Note;
 import com.hostmdy.recipe.domain.Recipe;
 import com.hostmdy.recipe.service.CategoryService;
 import com.hostmdy.recipe.service.RecipeService;
-
-import jakarta.websocket.server.PathParam;
 
 @Controller
 @RequestMapping("/recipe") // base mapping (should base mapping each controller)

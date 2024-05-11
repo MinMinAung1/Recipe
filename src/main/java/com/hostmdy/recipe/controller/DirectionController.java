@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hostmdy.recipe.domain.Direction;
-import com.hostmdy.recipe.domain.Ingredient;
 import com.hostmdy.recipe.service.DirectiornService;
 
 @Controller
@@ -43,7 +42,7 @@ public class DirectionController {
 	
 	@PostMapping("/new")
 	public String createDirection(@RequestParam Long recipeId,@ModelAttribute Direction direction) {
-		Direction createDirection = directiornService.createDirection(direction, recipeId);
+		directiornService.createDirection(direction, recipeId);
 		return "redirect:/recipe/" + recipeId + "/directions";
 	}
 	

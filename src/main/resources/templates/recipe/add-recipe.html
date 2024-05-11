@@ -41,21 +41,23 @@
 										</div>
 										<div class="col-md-9">
 											<div class="form-check" th:each="category : ${categories}">
-												<input class="form-check-input" type="checkbox" name="categoryNames" th:value="${category.name}">
-												<label class="form-check-label" th:for="${category.id}" th:text="${category.name}"></label>
+												<input class="form-check-input" type="checkbox" name="categoryNames"
+													th:value="${category.name}">
+												<label class="form-check-label" th:for="${category.id}"
+													th:text="${category.name}"></label>
 											</div>
 										</div>
 									</div>
 									<div class="row mb-3">
 										<div class="col-md-3">
 											<label for="prepTime" class="form-label">Prep Time:</label>
-											<input type="text" class="form-control" id="prepTime"
-												th:field="*{prepTime}" th:value="${recipe.prepTime}">
+											<input type="text" class="form-control" id="prepTime" th:field="*{prepTime}"
+												th:value="${recipe.prepTime}">
 										</div>
 										<div class="col-md-3">
 											<label for="cookTime" class="form-label">Cooktime:</label>
-											<input type="text" class="form-control" id="cookTime"
-												th:field="*{cookTime}" th:value="${recipe.cookTime}">
+											<input type="text" class="form-control" id="cookTime" th:field="*{cookTime}"
+												th:value="${recipe.cookTime}">
 										</div>
 										<div class="col-md-3">
 											<label for="difficulty" class="form-label">Difficulty:</label>
@@ -63,7 +65,8 @@
 												<option
 													th:each="difficultyValue : ${T(com.hostmdy.recipe.domain.Difficulty).values()}"
 													th:value="${difficultyValue.name()}"
-													th:text="${difficultyValue.name()}" selected="${difficultyValue.name() == recipe.difficulty.name()}">
+													th:text="${difficultyValue.name()}"
+													selected="${difficultyValue.name() == recipe.difficulty.name()}">
 												</option>
 											</select>
 										</div>
@@ -71,30 +74,32 @@
 									<div class="row mb-3">
 										<div class="col-md-12">
 											<label for="servings" class="form-label">Servings</label>
-											<input type="text" class="form-control" id="servings"
-												th:field="*{servings}" th:value="${recipe.servings}">
+											<input type="text" class="form-control" id="servings" th:field="*{servings}"
+												th:value="${recipe.servings}">
 										</div>
 									</div>
 
 									<div class="row mb-3">
 										<div class="col-md-12">
 											<label for="review" class="form-label">Review</label>
-											<input type="text" class="form-control" id="review"
-												th:field="*{review}" th:value="${recipe.review}">
+											<input type="text" class="form-control" id="review" th:field="*{review}"
+												th:value="${recipe.review}">
 										</div>
 									</div>
 
 									<div class="row mb-3">
 										<div class="col-md-12">
 											<label for="title" class="form-label">Name</label>
-											<input type="text" class="form-control" id="title" th:field="*{name}" th:value="${recipe.name}">
+											<input type="text" class="form-control" id="title" th:field="*{name}"
+												th:value="${recipe.name}">
 										</div>
 									</div>
 
 									<div class="row mb-3">
 										<div class="col-md-12">
 											<label for="source" class="form-label">Source</label>
-											<input type="text" class="form-control" id="source" th:field="*{source}" th:value="${recipe.source}">
+											<input type="text" class="form-control" id="source" th:field="*{source}"
+												th:value="${recipe.source}">
 										</div>
 									</div>
 
@@ -105,7 +110,7 @@
 												th:field="*{note.note}" th:value="${recipe.note.note}"></textarea>
 										</div>
 									</div>
-									
+
 									<button type="submit" class="btn btn-primary">Submit</button>
 								</div>
 							</div>
